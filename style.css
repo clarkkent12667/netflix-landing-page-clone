@@ -1,0 +1,781 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-select select {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+}
+
+.sign-in-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: darkred;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/background.png'); /* Use the local image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.email-signup {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    padding: 15px;
+    font-size: 1rem;
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+input:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Trending Now Section */
+.trending-now {
+    padding: 30px 50px;
+    background-color: black;
+}
+
+.trending-now h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Trending Now Section */
+.trending-now {
+    padding: 30px 50px;
+    background-color: black;
+}
+
+.trending-now h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Prevent unwanted scrollbars */
+    padding: 0 40px; /* Add padding for breathable edges */
+    display: flex;
+    justify-content: center; /* Center the carousel */
+}
+
+.movies {
+    display: flex;
+    gap: 20px; /* Add more spacing between cards */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Prevent scroll */
+    flex-wrap: nowrap; /* Keep cards in one line */
+}
+
+.movie-card {
+    position: relative;
+    flex: 0 0 220px; /* Fixed width for movie cards */
+    transition: transform 0.3s ease;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card:hover {
+    transform: scale(1.1); /* Add slight zoom on hover */
+}
+
+.movie-card .number {
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+.movie-card .tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Navigation Buttons */
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 10;
+    opacity: 0; /* Hide arrows by default */
+}
+
+/* Show Arrows on Hover */
+.carousel:hover .nav-btn {
+    opacity: 1; /* Show arrows when hovering over the carousel */
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.left-btn {
+    left: 10px; /* Add slight padding for positioning */
+}
+
+.right-btn {
+    right: 10px; /* Add slight padding for positioning */
+}
+
+/* More Reasons to Join Section */
+.more-reasons {
+    padding: 50px;
+    background-color: black;
+    color: white;
+}
+
+.more-reasons h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Container for the reasons boxes */
+.reasons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Spacing between boxes */
+}
+
+.reason-box {
+    background: linear-gradient(to right, #141414, #1d1e33);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reason-content {
+    max-width: 70%;
+}
+
+.reason-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reason-content p {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.reason-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.reason-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    background-color: #444;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px 30px;
+    font-size: 1rem;
+    background-color: #222;
+    border-top: 1px solid #444;
+    color: #e5e5e5;
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Show answer */
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Change "+" to "×" */
+}
+
+/* Footer Section */
+.footer {
+    padding: 40px 50px;
+    background-color: black;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-language {
+    margin-bottom: 20px;
+}
+
+.footer-language select {
+    background-color: black;
+    color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer-country {
+    color: #b3b3b3;
+    margin-top: 10px;
+}
+
+/* Email Signup in Footer */
+.footer-email {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-email p {
+    color: #b3b3b3;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer-email .email-signup {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-email input {
+    padding: 12px;
+    width: 300px;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.footer-email input::placeholder {
+    color: #b3b3b3;
+}
+
+.footer-email button {
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-email button:hover {
+    background-color: darkred;
+}
+
+/* General Responsive Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Adjust paragraph font */
+    }
+
+    .email-signup {
+        flex-direction: column; /* Stack input and button vertically */
+    }
+
+    .email-signup input {
+        width: 100%; /* Full width for input */
+    }
+
+    .email-signup button {
+        width: 100%; /* Full width for button */
+    }
+
+    /* Trending Now Section */
+    .movies {
+        flex-wrap: wrap; /* Allow movie cards to wrap */
+        justify-content: center; /* Center-align the movies */
+    }
+
+    .movie-card {
+        flex: 0 0 45%; /* Adjust width of movie cards */
+        margin-bottom: 20px; /* Add spacing */
+    }
+
+    /* More Reasons Section */
+    .features-container {
+        flex-direction: column; /* Stack feature boxes vertically */
+        gap: 20px; /* Add spacing */
+    }
+
+    .feature-box {
+        width: 100%; /* Full width */
+    }
+
+    /* FAQs */
+    .faq-item {
+        font-size: 0.9rem; /* Reduce text size */
+    }
+
+    /* Footer Section */
+    .footer-links {
+        flex-direction: column; /* Stack footer links */
+        align-items: center; /* Center-align the links */
+        gap: 20px; /* Add spacing */
+    }
+
+    .footer-email .email-signup {
+        flex-direction: column; /* Stack email input and button */
+    }
+
+    .footer-email input,
+    .footer-email button {
+        width: 100%; /* Full width */
+    }
+
+    .footer-language {
+        text-align: center; /* Center the language dropdown */
+    }
+}
+
+/* Smaller Mobile Devices (max-width 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Adjust paragraph font */
+    }
+
+    .movies {
+        gap: 10px; /* Reduce spacing between movies */
+    }
+
+    .movie-card {
+        flex: 0 0 100%; /* Make cards full width */
+    }
+
+    .faq-item {
+        font-size: 0.8rem; /* Smaller FAQ text */
+    }
+}
+
+/* General Responsive Styles */
+@media (max-width: 1024px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Slightly reduce font size */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem; /* Adjust paragraph font */
+    }
+
+    .email-signup {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email-signup input,
+    .email-signup button {
+        width: 100%;
+    }
+
+    /* Trending Now Section */
+    .movies {
+        flex-wrap: wrap; /* Allow movie cards to wrap */
+        gap: 15px;
+        justify-content: center; /* Center-align items */
+    }
+
+    .movie-card {
+        flex: 0 0 30%; /* Adjust width for tablet screens */
+        margin-bottom: 15px;
+    }
+
+    /* More Reasons Section */
+    .reasons-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    /* Footer Links */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .email-signup {
+        gap: 8px;
+    }
+
+    /* Trending Now Section */
+    .movie-card {
+        flex: 0 0 45%; /* Two cards per row on smaller screens */
+    }
+
+    /* FAQ Section */
+    .faq-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .email-signup input,
+    .email-signup button {
+        width: 100%;
+    }
+
+    /* Trending Now Section */
+    .movies {
+        gap: 10px;
+    }
+
+    .movie-card {
+        flex: 0 0 100%; /* Single movie card per row */
+    }
+
+    /* More Reasons Section */
+    .reasons-container {
+        gap: 10px;
+    }
+
+    /* FAQ Section */
+    .faq-question {
+        padding: 15px;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Footer Section */
+    .footer-email {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 5px;
+    }
+}
+
